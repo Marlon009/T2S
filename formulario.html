@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+        <link rel="stylesheet" href="style2.css">
+    <title>Formulário T2S</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="flex">
+
+
+
+                <div class="txt-leads">
+
+                    <h1>
+                        FIQUE POR<br>
+                        <span>DENTRO</span>
+                    </h1>
+                    <img src="assets/logo-semfundo.png" alt="Logo T2S">
+
+                    
+
+                </div><!--txt leads-->
+
+                <div class="form-leads">
+                    <form id="meuFormulario" action="https://docs.google.com/forms/d/e/1FAIpQLScudGZ0z8TpYE50w_k7R9GV3Z2YBujCWptKMl88NmhdGu8-2Q/formResponse" method="POST">
+                        <h2>INSIRA SEUS DADOS <br>
+                            <span>E MANTENHA-SE INFORMADO E CONECTADO</span>
+                        </h2>
+                
+                        <div class="input-box">
+                            <label for="nome">Seu nome completo*:</label>
+                            <input type="text" name="entry.123456789" id="nome" required>
+                        </div><!-- INPUT-BOX -->
+                
+                        <div class="input-box">
+                            <label for="telefone">Seu telefone:</label>
+                            <input type="text" name="entry.987654321" id="telefone">
+                        </div><!-- INPUT-BOX -->
+                
+                        <div class="input-box">
+                            <label for="email">Seu e-mail*:</label>
+                            <input type="text" name="entry.456789012" id="email" required>
+                        </div><!-- INPUT-BOX -->
+                
+                        <div class="btn-enviar">
+                            <input type="button" value="ENVIAR" onclick="enviarFormulario()">
+                        </div><!-- btn-enviar -->
+                    </form>
+                </div><!-- FORM LEADS -->
+                
+                <script>
+                function enviarFormulario() {
+                    $.ajax({
+                        url: "https://docs.google.com/forms/d/e/1FAIpQLScudGZ0z8TpYE50w_k7R9GV3Z2YBujCWptKMl88NmhdGu8-2Q/formResponse",
+                        data: $("#meuFormulario").serialize(),
+                        type: "POST",
+                        dataType: "xml",
+                        statusCode: {
+                            0: function () {
+                                // Success message or action
+                                alert("Formulário enviado com sucesso!");
+                            },
+                            200: function () {
+                                // Success message or action
+                                alert("Formulário enviado com sucesso!");
+                            }
+                        }
+                    });
+                }
+                </script>
+                
+                
+
+
+
+
+            </div><!--flex-->
+        </div><!--container-->
+    </section>
+</body>
+</html>

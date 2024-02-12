@@ -1,0 +1,342 @@
+.container{
+    max-width: 1430px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+.img-header{
+    position: relative;
+}
+
+.img-header::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #4169E1), url("../assets/office.jpeg");
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    opacity: 0.9;
+}
+
+//--------------hero------------//
+
+
+.hero{
+    color: $white-primary;
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+
+
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 46px;
+    }
+    
+    p{
+        text-align: center;
+        margin: 14px 0;
+    }
+
+
+}
+
+.button-contact{
+    padding: 14px 28px;
+    color: $white-primary;
+    background-color: #0000CD;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600px;
+    margin: 14px 0;
+}
+
+.button-contact:hover{
+    animation: scaleButton 0.8s alternate infinite, shine 1s alternate infinite;
+}
+
+@keyframes scaleButton{
+    from{
+        transform: scale(1);
+    } 
+    to{
+        transform: scale(1.09);
+    }
+}
+
+@keyframes shine{
+    to {
+        box-shadow: 0 0 10px 5px #add8e6, 0 0 20px 10px rgba(173, 216, 230, 0.5);
+      }
+}
+
+@media screen and (max-width: 768px){
+    .hero{
+        min-height: 60vh;
+
+        h1{
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .hero h1{
+        font-size: 24px;
+    }  
+}
+
+
+//about---------------------
+
+.about{
+    background-color: $primary-normal;
+    overflow: hidden;
+    color: $white-primary;
+
+}
+
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+    img{
+        max-width: 570px;
+    }
+}
+
+.about-content div{
+    flex: 1;
+}
+
+.about-description{
+    h2{
+        font-size: 38px;
+        margin-bottom: 24px;
+        
+        
+    }
+
+    p{
+        margin-bottom: 14px;
+        line-height: 150%;
+    }
+}
+
+@media screen  and (max-width: 768px){
+    .about-content{
+        flex-direction: column;
+    }
+}
+
+//SERVICES
+.services{
+    background-color: $white-primary;
+    color: $primary-dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 14px;
+}
+
+.services-content{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 38px;
+
+}
+
+
+.services-content p{
+    line-height: 150%;
+    max-width: 780px;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+
+.how-working{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0 44px 34px 44px;
+}
+
+.working{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: $white-primary;
+    border-radius: 8px;
+    box-shadow: 0px -1px 17px -4px rgba(0, 0,0, 0.45);
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        max-width: 500px;
+        transition: transform 0.3s;
+    }
+}
+
+.working img:hover{
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.working-info{
+    width: 100%;
+    //display: flex;
+    justify-content: space-between;
+    padding: 14px;
+    background-color: $white-primary;
+    z-index: 99;
+}
+
+.working-info h3{
+    text-align: center;
+    font-size: 19px;
+}
+
+@media screen and (max-width: 768px){
+    .how-working{
+        flex-direction: column;
+    }
+    .working img{
+        max-width: 740px;
+    }
+}
+
+
+//plan---------
+
+.plan{
+    background-color: $primary-normal;
+    overflow: hidden;
+    color: $white-primary;
+
+}
+
+.plan-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+    img{
+        max-width: 570px;
+    }
+}
+
+.plan-content div{
+    flex: 1;
+}
+
+.plan-description{
+    h2{
+        font-size: 38px;
+        margin-bottom: 24px;
+        
+        
+    }
+
+    p{
+        margin-bottom: 14px;
+        line-height: 150%;
+    }
+}
+
+@media screen  and (max-width: 768px){
+    .plan-content{
+        flex-direction: column;
+    }
+}
+
+//footer-------------
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0;
+    gap: 24px;
+    color: $white-primary;
+}
+
+.footer-icons{
+    display: flex;
+    gap: 8px;
+
+}
+
+//-------------------
+
+//Botao Whatsapp
+
+.btn-whatsapp{
+
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 99;
+    
+
+
+    img{
+        max-width: 74px;
+        transition: transform 0.4s;
+    }
+
+    img:hover{
+        transform: scale(1.1);
+    }
+}
+
+.btn-whatsapp .tooltip-text{
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    padding: 4px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $secondary-light;
+    color: $white-primary;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.btn-whatsapp:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+@media screen and (max-width:768px){
+    .btn-whatsapp{
+        max-width: 64px;
+    }
+}
